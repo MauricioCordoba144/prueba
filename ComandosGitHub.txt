@@ -1,0 +1,23 @@
+Comandos github
+$ git config --global user.name "nombre" //Configurar nombre
+$ git config --global user.email "correo" //Configurar correo
+
+$ git add -a //Agregar archivos para actualizar
+$ git commit -m "Estado No. x: Mensaje" //Actualizar archivos
+
+$ git branch //Para crear nuevas ramas
+$ git checkout "nombre" //Reemplazar "nombre" por el nombre de rama para ingresar
+$ git merge "nombre" //Reemplazar "nombre" por el nombre de rama para actualizar en la actual
+$ git branch "nombre" -d //Reemplazar "nombre" por el nombre de rama para borrar
+
+$ git remote add origin "direccion" //Reemplazar "direccion" por la direccion del github para asociarse a un repositorio
+$ git push origin master //Se suben los archivos actualizados de master
+$ git clone "direccion" ////Reemplazar "direccion" por la direccion del github para clonar el repositorio
+
+
+
+
+
+
+
+
