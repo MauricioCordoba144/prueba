@@ -1,0 +1,28 @@
+.banner{
+    width:1200px;
+    height:400px;
+    border:3px solid black;
+    margin: auto;    
+}
+
+.slogan{
+    color: rgb(62, 55, 134);
+    font-size: 22px;
+        
+}
+
+.nav ul{
+    text-align:center;
+    height:60px;
+}
+
+
+li
+{
+    color:rgb(62, 55, 134); 
+}   
+a
+{
+   font-size:19px; 
+   color:green;
+}  
