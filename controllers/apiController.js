@@ -1,4 +1,5 @@
 const Citas = require("../models/Citas");
+const Agenda = require("../models/Agenda");
 
 module.exports.funcCitas = async (req,res) => {
     console.log("postcitas");
@@ -58,4 +59,14 @@ module.exports.eliminarCitas = async (req,res) => {
     }
 };
 
-
+module.exports.agendacitas = async (req,res) => {
+    console.log("agendacita");
+    const { fecha, UserID, horainicial, horafinal} = req.body;
+    try{
+        const citas = await Citas.create({fecha, UserID, horainicial, horafinal});
+        res.status(200).json({fecha, horainicial, horafinal});
+    } catch (error) {
+        console.log(error);
+        res.status(400).json(error);
+    }
+};
