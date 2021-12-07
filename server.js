@@ -17,7 +17,7 @@ const apiRoutes = require("./routes/apiRoutes");
 const { requireAuth } = require("./middleware/authMiddleWare");
 
 var corsOptions = {
-    origin: "http://localhost:3000", //Se cambia en Heroku 
+    origin: "https://clever-nightingale-343e9f.netlify.app", //Se cambia en Heroku "http://localhost:3000"
     //optionsSuccessStatus: 200,
     credentials: true,
 };
