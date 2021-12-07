@@ -27,17 +27,7 @@ const port = (process.env.DB_PORT||3000);
 
 mongoose
     .connect(
-        "mongodb://" +
-        process.env.DB_USERNAME +
-        ":" +
-        process.env.DB_PASSWORD +
-        "@" +
-        process.env.DB_HOST +
-        ":" +
-        port +
-        "/" +
-        process.env.DB_NAME +
-        "?retryWrites=true&w=majority",
+        "mongodb+srv://Admin:Admin@cluster0.ipude.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
