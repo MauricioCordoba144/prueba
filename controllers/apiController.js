@@ -12,3 +12,50 @@ module.exports.funcCitas = async (req,res) => {
     }
 };
 
+module.exports.getCitas = async (req,res) => {
+    console.log("getcitas");
+    try{
+        const listacitas = await Citas.find();
+        res.status(200).json(listacitas);
+    } catch (error) {
+        console.log(error);
+        res.status(400).json(error);
+    }
+};
+
+module.exports.getCita = async (req,res) => {
+    console.log("getcita");
+    const _id = req.params.id;
+    try{
+        const listacitas = await Citas.find({"_id": _id});
+        res.status(200).json(listacitas);
+    } catch (error) {
+        console.log(error);
+        res.status(400).json(error);
+    }
+};
+
+
+module.exports.eliminarCitas = async (req,res) => {
+    console.log("eliminar citas");
+    const _id = req.params.id;
+    console.log(_id);   
+    try{
+        const citasactuales = await Citas.findByIdAndDelete({_id});
+        if(!citasactuales){
+            return res.status(400).json({
+                mensaje: 'No se encontró el id indicado',
+                error
+            });
+        }
+        
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            mensaje: "Ocurrio un error",
+            error
+        });
+    }
+};
+
+
