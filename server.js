@@ -18,8 +18,8 @@ const { requireAuth } = require("./middleware/authMiddleWare");
 
 var corsOptions = {
     origin: "https://clever-nightingale-343e9f.netlify.app", //Se cambia en Heroku "http://localhost:3000"
-    SameSite: None,
-    //optionsSuccessStatus: 200,
+    //SameSite: None,
+    optionsSuccessStatus: 200,
     credentials: true,
 };
 
