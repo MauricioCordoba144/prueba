@@ -37,7 +37,6 @@ const createToken = (id) => {
     return jwt.sign({id}, process.env.JWT_SECRET, {expiresIn: maxAge});
 };
 
-
 module.exports.postRegistrar = async (req,res) => {
     console.log("PostRegistrar");
     const { firstname, lastname, email, password } = req.body;

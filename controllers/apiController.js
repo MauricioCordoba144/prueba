@@ -63,7 +63,7 @@ module.exports.agendacitas = async (req,res) => {
     console.log("agendacita");
     const { fecha, UserID, horainicial, horafinal} = req.body;
     try{
-        const citas = await Citas.create({fecha, UserID, horainicial, horafinal});
+        const agenda = await Agenda.create({fecha, UserID, horainicial, horafinal});
         res.status(200).json({fecha, horainicial, horafinal});
     } catch (error) {
         console.log(error);
